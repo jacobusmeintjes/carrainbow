@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Threading.Channels;
 
-namespace queue.service.Services;
+namespace carrainbow.service.Services;
 
 public class WriterService : BackgroundService
 {

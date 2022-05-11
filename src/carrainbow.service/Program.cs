@@ -1,6 +1,5 @@
 using System.Threading.Channels;
-using queue.service;
-using queue.service.Services;
+using carrainbow.service.Services;
 
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices(services =>
