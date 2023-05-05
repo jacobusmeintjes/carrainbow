@@ -17,6 +17,6 @@
 #husky run --args "$1" "$2"
 
 ## or put your custom commands -------------------
-echo 'Husky.Net is awesome!'
+dotnet husky run -n 'welcome-message'
 echo 'Running pre-commit tasks!'
-dotnet husky run
+ dotnet husky run -v --group "pre-commit"

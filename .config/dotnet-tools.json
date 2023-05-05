@@ -7,6 +7,12 @@
       "commands": [
         "husky"
       ]
+    },
+    "roslynator.dotnet.cli": {
+      "version": "0.6.0",
+      "commands": [
+        "roslynator"
+      ]
     }
   }
 }
