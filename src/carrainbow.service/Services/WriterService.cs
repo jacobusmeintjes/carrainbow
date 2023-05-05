@@ -86,20 +86,20 @@ public class MultipleReaderService : BackgroundService
                             var color = Enum.Parse<ConsoleColor>(count.Key);
                             Console.ForegroundColor = color;
 
-                            Console.WriteLine($"{"".PadLeft(count.Value, '█')}|{count.Key}\t{count.Value}");                            
+                            Console.WriteLine($"{"".PadLeft(count.Value, '█')}|{count.Key}\t{count.Value}");
                         }
 
                         Console.ForegroundColor = temp;
                     }
 
-                    
+
 
                     await Task.Delay(5);
                 }
             }
             catch (ChannelClosedException)
             {
-            }                    
+            }
         }
     }
 }
