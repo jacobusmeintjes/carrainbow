@@ -17,6 +17,5 @@
 #husky run --args "$1" "$2"
 
 ## or put your custom commands -------------------
-#echo 'Husky.Net is awesome!'
-
 echo 'Husky.Net is awesome!'
+echo 'Running pre-commit tasks!'

@@ -16,10 +16,11 @@
 ## pass hook arguments to task
 #husky run --args "$1" "$2"
 
-## or put your custom commands -------------------
+## or put your custom commands -------------------l
 #echo 'Husky.Net is awesome!'
 
-echo 'Running pre-commit tasks!'
+echo 'Running pre-push tasks!'
 dotnet build
 
 dotnet test
+
