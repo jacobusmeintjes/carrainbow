@@ -19,3 +19,4 @@
 ## or put your custom commands -------------------
 echo 'Husky.Net is awesome!'
 echo 'Running pre-commit tasks!'
+dotnet husky run

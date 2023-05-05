@@ -13,8 +13,15 @@
          "name": "dotnet-format",
          "command": "dotnet",
          "group": "pre-commit",
-         "args": ["format"],
+         "args": ["format", "-v","diag"],
          "include": ["**/*.cs"]
+      },
+      {
+         "name": "roslyn analyzer",
+         "command": "roslynator",
+         "group": "pre-commit",
+         "args": ["analyze", "--severity-level","info"],
+         "include": ["**/*.csproj"]
       }
    ]
 }

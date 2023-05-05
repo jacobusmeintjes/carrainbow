@@ -1,5 +1,4 @@
-﻿using System.Drawing;
-using System.Threading.Channels;
+﻿using System.Threading.Channels;
 
 namespace carrainbow.service.Services;
 
@@ -12,10 +11,10 @@ public class WriterService : BackgroundService
         _channelWriter = channelWriter;
     }
 
-    private string GetRandomColor()
+    private static string GetRandomColor()
     {
         var colors = new[] { "Red", "Cyan", "Yellow", "Green", "Blue", "Magenta", "Gray", "White" };
-        Random random = new Random();
+        var random = new Random();
         return colors[random.Next(0, colors.Length)];
     }
 
@@ -32,10 +31,7 @@ public class WriterService : BackgroundService
             }
             await Task.Delay(1, stoppingToken);
 
-            var car = new Car
-            {
-                Color = GetRandomColor()
-            };
+            var car = new Car(GetRandomColor());
 
             await _channelWriter.WriteAsync(car, stoppingToken).ConfigureAwait(false);
             counter++;
@@ -94,7 +90,7 @@ public class MultipleReaderService : BackgroundService
 
 
 
-                    await Task.Delay(5);
+                    await Task.Delay(5, stoppingToken);
                 }
             }
             catch (ChannelClosedException)
@@ -140,13 +136,10 @@ public class SingleReaderService : BackgroundService
                 Console.WriteLine($"{count.Key}\t{count.Value}");
             }
 
-            await Task.Delay(2000);
+            await Task.Delay(2000, stoppingToken);
             Console.Clear();
         }
     }
 }
 
-public record Car
-{
-    public string Color { get; init; } = default;
-}
+public record Car(string Color);
