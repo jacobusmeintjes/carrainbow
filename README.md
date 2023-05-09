@@ -1,5 +1,9 @@
 # carrainbow
 
+Use pipelines to create internal queues in a console application.
+
+# Husky.Net - git pipeline
+
 Added Husky.Net to give access to git style pipeline
 
 https://alirezanet.github.io/Husky.Net/
