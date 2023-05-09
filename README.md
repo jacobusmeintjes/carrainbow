@@ -6,6 +6,9 @@ Use pipelines to create internal queues in a console application.
 
 Added Husky.Net to give access to git style pipeline
 
+# installation
+https://alirezanet.github.io/Husky.Net/guide/getting-started.html#installation
+
 https://alirezanet.github.io/Husky.Net/
 
 https://alirezanet.github.io/Husky.Net/guide/#features 
